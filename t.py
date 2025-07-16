@@ -13,6 +13,8 @@ a = Text(root,height = 2,width = 6,)
 a.pack()
 a.place(x=380,y=40)
 
+a.insert(END,0)
+
 def one():
     txt.insert(END,1)
 def two():
@@ -99,7 +101,7 @@ zer.pack()
 zer.place(x=210,y=260)
 
 def func(event):
-    a.insert(END, eval(txt.get(1.0, END)))
+    a.replace("1.0", END, eval(txt.get(1.0, END)))
  
  
 root.bind('<Return>', func)
